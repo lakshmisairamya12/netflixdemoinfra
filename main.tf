@@ -4,10 +4,10 @@ region = "ap-south-1"
 
 resource "aws_instance" "one" {
 count = 4
-ami = "ami-020cba7c55df1f615"
+ami = "ami-0f918f7e67a3323f0"
 instance_type = "t2.medium"
 key_name = "netflix"
-vpc_security_group_ids = ["sg-062279e81da1d6c64"]
+vpc_security_group_ids = ["sg-002c307d047f6fac3"]
 tags = {
 name = var.instance_name[count.index]
 }
