@@ -14,4 +14,8 @@ name = var.instance_name[count.index]
 }
 
 variable "instance_names" {
-default = ["jenkins",  "Appserver-1", "Appserver-2", "Monitoring server"]
+  description = "List of EC2 instance names"
+  type        = list(string)
+  default = ["jenkins",  "Appserver-1", "Appserver-2", "Monitoring server"]
+}
+
