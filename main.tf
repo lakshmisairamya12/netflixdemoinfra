@@ -1,0 +1,17 @@
+provider "aws" {
+region = "ap-south-1"
+}
+
+resource "aws_instance" "one" {
+count = 4
+ami = "ami-020cba7c55df1f615"
+instance_type = "t2.medium"
+key_name = "netflix"
+vpc_security_group_ids = ["sg-062279e81da1d6c64"]
+tags = {
+name = var.instance_name[count.index]
+}
+}
+
+variable "instance_names" {
+default = ["jenkins",  "Appserver-1", "Appserver-2", "Monitoring server"]
