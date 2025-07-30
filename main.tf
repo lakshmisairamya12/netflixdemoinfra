@@ -9,7 +9,7 @@ instance_type = "t2.medium"
 key_name = "netflix"
 vpc_security_group_ids = ["sg-002c307d047f6fac3"]
 tags = {
-name = var.instance_name[count.index]
+Name = var.instance_name[count.index]
 }
 }
 
